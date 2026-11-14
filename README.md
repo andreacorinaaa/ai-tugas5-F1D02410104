@@ -30,7 +30,7 @@ Sistem ini membantu mengidentifikasi kemungkinan kategori sampah rumah tangga be
 
 Judul: Peraturan Menteri Lingkungan Hidup dan Kehutanan Nomor 14 Tahun 2021 tentang Pengelolaan Sampah pada Bank Sampah.
 
-URL: [https://peraturan.bpk.go.id/Details/233754/permen-lhk-no-14-tahun-2021]
+URL: https://peraturan.bpk.go.id/Details/233754/permen-lhk-no-14-tahun-2021
 
 Tanggal akses: 14 November 2026.
 
@@ -38,7 +38,7 @@ Tanggal akses: 14 November 2026.
 
 Judul: Peraturan Menteri Lingkungan Hidup dan Kehutanan Nomor 9 Tahun 2024.
 
-URL: [https://peraturan.bpk.go.id/Details/233754/permen-lhk-no-14-tahun-2021] 
+URL: https://peraturan.bpk.go.id/Details/291985/permen-lhk-no-9-tahun-2024 
 
 Tanggal akses: 14 November 2026.
 
