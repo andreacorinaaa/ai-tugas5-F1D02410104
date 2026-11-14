@@ -1,0 +1,80 @@
+{
+  "topik": "Pemilahan Sampah Rumah Tangga Berdasarkan Karakteristik Sampah",
+  "metode": "Backward Chaining",
+  "pertanyaan": {
+    "sisa_makanan": "Apakah sampah berupa sisa makanan atau sayuran?",
+    "bahan_daur_ulang": "Apakah bahan sampah berupa kertas, plastik, logam, atau kaca?",
+    "bersih_dan_kering": "Apakah bahan tersebut cukup bersih dan kering untuk dipilah?",
+    "baterai_atau_lampu": "Apakah sampah berupa baterai bekas atau lampu bekas?",
+    "wadah_utuh": "Apakah sampah berupa wadah yang masih utuh?",
+    "bisa_digunakan_kembali": "Apakah wadah tersebut masih bisa digunakan kembali?",
+    "tidak_bisa_dimanfaatkan": "Apakah sampah tidak dapat digunakan kembali atau didaur ulang berdasarkan informasi yang diketahui?",
+    "tidak_tercampur_bahan_berbahaya": "Apakah sampah organik tidak tercampur bahan berbahaya?"
+  },
+  "aturan": [
+    {
+      "id": "R1",
+      "jika": ["sisa_makanan"],
+      "maka": "sampah_mudah_terurai",
+      "nama": "Sampah mudah terurai",
+      "penjelasan": "Sisa makanan dan sampah organik termasuk kelompok sampah yang mudah terurai.",
+      "rekomendasi": "Pisahkan dari sampah lain dan pertimbangkan pengolahan organik yang sesuai."
+    },
+    {
+      "id": "R2",
+      "jika": ["bahan_daur_ulang", "bersih_dan_kering"],
+      "maka": "sampah_dapat_didaur_ulang",
+      "nama": "Sampah yang dapat didaur ulang",
+      "penjelasan": "Kertas, plastik, logam, dan kaca termasuk jenis yang dapat didaur ulang sesuai kondisi dan fasilitas yang tersedia.",
+      "rekomendasi": "Pisahkan berdasarkan bahan dan periksa ketentuan penerimaan di bank sampah atau fasilitas daur ulang setempat."
+    },
+    {
+      "id": "R3",
+      "jika": ["baterai_atau_lampu"],
+      "maka": "sampah_perlu_penanganan_khusus",
+      "nama": "Sampah yang perlu penanganan khusus",
+      "penjelasan": "Baterai bekas dan lampu tertentu termasuk contoh sampah yang perlu dipisahkan dan ditangani dengan benar.",
+      "rekomendasi": "Jangan mencampurkannya dengan sampah rumah tangga biasa. Cari fasilitas pengumpulan yang sesuai."
+    },
+    {
+      "id": "R4",
+      "jika": ["wadah_utuh", "bisa_digunakan_kembali"],
+      "maka": "sampah_dapat_digunakan_kembali",
+      "nama": "Barang yang dapat digunakan kembali",
+      "penjelasan": "Wadah yang masih utuh dan masih berfungsi dapat dipertimbangkan untuk digunakan kembali.",
+      "rekomendasi": "Gunakan kembali jika aman dan sesuai fungsi, atau salurkan untuk dimanfaatkan orang lain."
+    },
+    {
+      "id": "R5",
+      "jika": ["sampah_mudah_terurai", "tidak_tercampur_bahan_berbahaya"],
+      "maka": "dapat_dipertimbangkan_untuk_kompos",
+      "nama": "Dapat dipertimbangkan untuk pengomposan",
+      "penjelasan": "Sampah organik yang sesuai dan tidak tercampur bahan berbahaya dapat dipertimbangkan untuk diolah menjadi kompos.",
+      "rekomendasi": "Pastikan jenis bahan sesuai dengan metode pengomposan yang digunakan."
+    },
+    {
+      "id": "R6",
+      "jika": ["tidak_bisa_dimanfaatkan"],
+      "maka": "sampah_residu",
+      "nama": "Sampah residu",
+      "penjelasan": "Sampah yang tidak dapat dimanfaatkan kembali atau didaur ulang berdasarkan informasi yang tersedia dapat dikelompokkan sebagai residu.",
+      "rekomendasi": "Ikuti ketentuan pengumpulan dan pembuangan sampah yang berlaku di daerah setempat."
+    },
+    {
+      "id": "R7",
+      "jika": ["sampah_perlu_penanganan_khusus"],
+      "maka": "pisahkan_dari_sampah_biasa",
+      "nama": "Pisahkan dari sampah rumah tangga biasa",
+      "penjelasan": "Kesimpulan ini menggunakan hasil R3 untuk menyarankan pemisahan sampah yang memerlukan penanganan khusus.",
+      "rekomendasi": "Simpan dengan aman dan serahkan ke titik pengumpulan yang sesuai."
+    },
+    {
+      "id": "R8",
+      "jika": ["sampah_dapat_didaur_ulang", "wadah_utuh"],
+      "maka": "periksa_peluang_pemanfaatan_kembali",
+      "nama": "Periksa peluang pemanfaatan kembali",
+      "penjelasan": "Barang yang dapat didaur ulang dan masih utuh perlu diperiksa terlebih dahulu apakah bisa digunakan kembali.",
+      "rekomendasi": "Utamakan penggunaan kembali jika barang masih aman dan berfungsi, sebelum mengirimkannya ke fasilitas daur ulang."
+    }
+  ]
+}
